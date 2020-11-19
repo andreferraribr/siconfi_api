@@ -83,6 +83,7 @@ f_api <-   GET(a)
 f_txt <- content(f_api, as="text", encoding="UTF-8")
 
 f_json <- fromJSON(f_txt, flatten = FALSE)
+Sys.sleep(1)
 
 f_df <-as.data.frame(f_json[[1]]) 
 
